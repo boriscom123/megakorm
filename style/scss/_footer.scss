@@ -1,0 +1,194 @@
+.footer {
+  width: 100%;
+  background-image: url("/image/footer-background.jpg");
+  background-repeat: repeat-x;
+
+  > .footer-content {
+
+    padding: 200px 0 0 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+
+    @media (max-width: calc($bp-sm - 1px)) {
+      padding: 50px 0 0 0;
+    }
+
+    > .container {
+
+      @media (max-width: calc($containerMaxWidth + 15px + 15px)) {
+        padding: 50px 15px 0 15px;
+        max-width: 100%;
+      }
+
+      > .content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        > .footer-top {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 50px;
+
+          @media (max-width: calc($bp-xl - 1px)) {
+            gap: 20px;
+          }
+
+          @media (max-width: calc($bp-lg - 1px)) {
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+
+          > div {
+            width: 100%;
+            max-width: 320px;
+          }
+
+          > .copyrights {
+
+            > .title {
+              font-family: $mainFontFamily;
+              font-style: normal;
+              font-weight: 700;
+              font-size: 20px;
+              line-height: 24px;
+              text-transform: capitalize;
+              color: $alterFontColor1;
+            }
+
+            > .text {
+              display: flex;
+              flex-direction: column;
+              gap: 5px;
+
+              > p {
+                font-family: $mainFontFamily;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 16px;
+                color: $alterFontColor1;
+              }
+            }
+          }
+
+          > .agreement {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            &:hover {
+              > .link {
+                color: $linkHoverColor;
+              }
+
+              > .link-decoration {
+                margin: 0 0 0 10px;
+              }
+            }
+
+            > .link {
+              font-family: $mainFontFamily;
+              font-style: normal;
+              font-weight: 700;
+              font-size: 14px;
+              line-height: 16px;
+              color: $alterFontColor1;
+            }
+
+            > .link-decoration {
+              height: 15px;
+              width: 15px;
+              margin: 0 5px 0 5px;
+              background-image: url("/image/icons/chevron-blue.svg");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: contain;
+              transition: $transition;
+              transform: rotateY(180deg);
+            }
+          }
+
+          > .social-icons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @media (max-width: calc($bp-lg - 1px)) {
+              max-width: 100%;
+              justify-content: center;
+              gap: 20px;
+            }
+
+            > a {
+              height: 50px;
+              width: 50px;
+              min-width: 50px;
+              background-position: center;
+              background-size: 65% 65%;
+              transition: $transition;
+
+              &:hover {
+                transform: scale(1.2);
+              }
+
+              &:nth-child(1) {
+                clip-path: path("M47.7273 24.5455C47.7273 37.5995 38.7596 50 25.4545 50C12.1495 50 0 37.5995 0 24.5455C0 11.4915 4.42223 0 17.7273 0C31.0323 0 46.8182 9.54545 47.7273 24.5455Z");
+                animation-duration: 11s;
+              }
+              &:nth-child(2) {
+                clip-path: path("M50.5 23.7705C50.5 35.5405 38.0897 42.623 26.3197 42.623C14.5497 42.623 0.5 28.9831 0.5 17.2131C0.5 5.44311 14.5497 0 26.3197 0C38.0897 0 50.5 12.0005 50.5 23.7705Z");
+                animation-duration: 12s;
+              }
+              &:nth-child(3) {
+                clip-path: path("M50 17.2414C50 29.6202 38.0479 44.8276 25.431 44.8276C12.8142 44.8276 0 36.5167 0 24.1379C0 11.7591 12.8142 0 25.431 0C38.0479 0 50 4.86258 50 17.2414Z");
+                animation-duration: 13s;
+              }
+              &:nth-child(4) {
+                clip-path: path("M50.4199 16.5646C50.4199 29.0336 38.3807 44.3519 25.6718 44.3519C9.60726 44.3519 1.79207 31.3266 0.489543 20.4722C-0.813074 9.61772 16.4364 0.5 29.1452 0.5C46.0781 0.5 50.4199 4.09551 50.4199 16.5646Z");
+                animation-duration: 14s;
+              }
+
+            }
+
+            > .animation {
+              animation-name: social-icons-decoration;
+              //animation-duration: 10s;
+              animation-timing-function: linear;
+              animation-iteration-count: infinite;
+            }
+          }
+        }
+
+        > .footer-bottom {
+          height: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          > .made-by {
+            border-bottom: 1px dashed $fontColor;
+            transition: $transition;
+
+            &:hover {
+              border-bottom: 1px solid $linkHoverColor;
+
+              > a {
+                color: $linkHoverColor;
+              }
+            }
+
+            > a {
+              font-family: $mainFontFamily;
+              font-style: normal;
+              font-weight: 700;
+              font-size: 20px;
+              color: $fontColor;
+              transition: $transition;
+            }
+          }
+        }
+      }
+    }
+  }
+}

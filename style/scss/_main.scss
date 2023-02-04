@@ -1,0 +1,741 @@
+.main {
+  flex-grow: 1;
+
+  > .main-content {
+
+    > .block-1 {
+      padding: 150px 0 0 0;
+      position: relative;
+
+      > .container {
+
+        @media (max-width: calc($containerMaxWidth + 15px + 15px)) {
+          padding: 0 15px 0 15px;
+          max-width: 100%;
+        }
+
+        > .block-1-content {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+          width: 100%;
+          max-width: 540px;
+
+          @media (max-width: calc($bp-xxl - 1px)) {
+            padding: 50px 0 0 0;
+          }
+          @media (max-width: calc($bp-xl - 1px)) {
+            padding: 100px 0 0 0;
+          }
+          @media (max-width: calc($bp-sm - 1px)) {
+            padding: 50px 0 0 0;
+            gap: 20px;
+          }
+
+          > .title {
+            font-family: $mainFontFamily;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 52px;
+            color: $fontColor;
+
+            @media (max-width: calc($bp-sm - 1px)) {
+              font-size: 34px;
+            }
+          }
+
+          > .text {
+            font-family: $mainFontFamily;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: $alterFontColor;
+
+            @media (max-width: calc($bp-sm - 1px)) {
+              font-size: 14px;
+            }
+          }
+
+          > .buttons {
+            display: flex;
+            gap: 30px;
+
+            @media (max-width: calc($bp-sm - 1px)) {
+              gap: 20px;
+            }
+
+            > button {
+              width: 160px;
+              height: 40px;
+              border-radius: 8px;
+              font-family: $mainFontFamily;
+              font-style: normal;
+              font-weight: 700;
+              font-size: 14px;
+              border: none;
+              transition: $transition;
+
+              @media (max-width: calc($bp-sm - 1px)) {
+                width: 100%;
+              }
+            }
+
+            > .button-yellow {
+              background: rgba(242, 143, 27, 1);
+              color: $color;
+
+              &:hover {
+                background: rgba(48, 82, 159, 0.2);
+                color: $fontColor;
+              }
+            }
+
+            > .button-lightblue {
+              background: rgba(48, 82, 159, 0.2);
+              color: $fontColor;
+
+              &:hover {
+                background: rgba(242, 143, 27, 1);
+                color: $color;
+              }
+            }
+          }
+        }
+      }
+
+      > .decorations {
+        position: absolute;
+        width: 100%;
+        z-index: -500;
+
+        @media (max-width: calc($bp-sm - 1px)) {
+          overflow: hidden;
+        }
+
+        > .decoration-1 {
+          position: absolute;
+          top: 0;
+          left: 0;
+
+          > .gradient {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+          }
+        }
+
+        > .decoration-2 {
+          position: absolute;
+          top: 0;
+          right: 0;
+
+          > .gradient {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+          }
+        }
+      }
+    }
+
+    > .slider-1 {
+      padding: 190px 0 0 0;
+
+      @media (max-width: calc($bp-md - 1px)) {
+        padding: 100px 0 0 0;
+      }
+      @media (max-width: calc($bp-sm - 1px)) {
+        padding: 50px 0 0 0;
+      }
+
+      > .container {
+
+        @media (max-width: calc($containerMaxWidth + 15px + 15px)) {
+          padding: 0 15px 0 15px;
+          max-width: 100%;
+        }
+
+        > .slider-1-content {
+          position: relative;
+          display: flex;
+          align-items: center;
+          gap: 70px;
+
+          @media (max-width: calc($bp-xxl - 1px)) {
+            padding: 0 60px 0 60px;
+            gap: 60px;
+          }
+          @media (max-width: calc($bp-xl - 1px)) {
+            gap: 20px;
+          }
+          @media (max-width: calc($bp-md - 1px)) {
+            flex-direction: column;
+          }
+          @media (max-width: calc($bp-sm - 1px)) {
+            padding: 0;
+          }
+
+          > .slider-button {
+            position: absolute;
+            top: 50%;
+            height: 50px;
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $linkColor;
+            clip-path: path("m 27 2 c 14 -3 20 7 23 17 c 4 16 -4 27 -13 27 c -9 0 -21 -2 -28 -10 c -20 -23 5 -30 18 -34 z");
+            cursor: pointer;
+            transition: $transition;
+            z-index: 50;
+
+            &:hover {
+              background-color: $linkHoverColor;
+
+              > div {
+                background-image: url("/image/icons/chevron-blue.svg");
+              }
+            }
+
+            @media (max-width: calc($bp-md - 1px)) {
+              top: 200px;
+            }
+            @media (max-width: calc($bp-sm - 1px)) {
+              top: 130px;
+            }
+
+            > div {
+              height: 50%;
+              width: 50%;
+              background-image: url("/image/icons/chevron-white.svg");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: contain;
+
+
+            }
+          }
+
+          > .slider-button-left {
+            right: calc(100% + 15px);
+
+            @media (max-width: calc($bp-xxl - 1px)) {
+              left: 0;
+            }
+          }
+
+          > .slider-button-right {
+            left: calc(100% + 15px);
+            transform: rotateY(180deg);
+
+            @media (max-width: calc($bp-xxl - 1px)) {
+              left: unset;
+              right: 0;
+            }
+          }
+
+          > .slider-block-left {
+            position: relative;
+            width: 50%;
+            height: 550px;
+            min-width: 550px;
+
+            @media (max-width: calc($bp-lg - 1px)) {
+              height: 290px;
+              width: 290px;
+              min-width: 290px;
+            }
+            @media (max-width: calc($bp-md - 1px)) {
+              width: 100%;
+              height: 550px;
+              min-width: 550px;
+            }
+            @media (max-width: calc($bp-sm - 1px)) {
+              height: 290px;
+              width: 290px;
+              min-width: 290px;
+            }
+
+            > .slider-block-background {
+              position: absolute;
+              height: 100%;
+              width: 100%;
+              top: 0;
+              left: 0;
+              background-color: $linkHoverColor;
+              z-index: -5;
+              clip-path: path("M 35 353 C -4 325 -28 270 64 152 C 155 35 379 -66 471 56 C 547 157 510 364 461 441 C 438 478 372 556 283 477 C 200 410 73 381 34 353 Z");
+
+              @media (max-width: calc($bp-lg - 1px)) {
+                clip-path: path("M18.6967 198.882C-2.50848 183.284 -15.3616 152.45 35.3363 86.1185C86.0341 19.7872 209.493 -37.2138 259.939 31.0178C301.681 87.4771 280.55 203.526 253.226 247.387C240.616 267.628 203.629 311.517 154.98 267.446C114.114 230.427 39.9018 214.48 18.6967 198.882Z");
+              }
+              @media (max-width: calc($bp-md - 1px)) {
+                clip-path: path("M 35 353 C -4 325 -28 270 64 152 C 155 35 379 -66 471 56 C 547 157 510 364 461 441 C 438 478 372 556 283 477 C 200 410 73 381 34 353 Z");
+              }
+              @media (max-width: calc($bp-sm - 1px)) {
+                clip-path: path("M18.6967 198.882C-2.50848 183.284 -15.3616 152.45 35.3363 86.1185C86.0341 19.7872 209.493 -37.2138 259.939 31.0178C301.681 87.4771 280.55 203.526 253.226 247.387C240.616 267.628 203.629 311.517 154.98 267.446C114.114 230.427 39.9018 214.48 18.6967 198.882Z");
+              }
+            }
+
+            > .animation {
+              animation-name: slider-1-image-1-decoration;
+              animation-duration: 10s;
+              animation-timing-function: linear;
+              animation-iteration-count: infinite;
+
+              @media (max-width: calc($bp-lg - 1px)) {
+                animation-name: slider-1-image-1-decoration-lg;
+              }
+              @media (max-width: calc($bp-md - 1px)) {
+                animation-name: slider-1-image-1-decoration;
+              }
+              @media (max-width: calc($bp-sm - 1px)) {
+                animation-name: slider-1-image-1-decoration-lg;
+
+              }
+            }
+
+            > .slider-block-image {
+              position: absolute;
+              height: 100%;
+              width: 100%;
+              top: 0;
+              left: 0;
+              z-index: -5;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              @media (max-width: calc($bp-lg - 1px)) {
+                justify-content: flex-start;
+              }
+              @media (max-width: calc($bp-md - 1px)) {
+                justify-content: center;
+              }
+              @media (max-width: calc($bp-sm - 1px)) {
+                justify-content: center;
+              }
+
+              > img {
+                height: 80%;
+                width: 80%;
+                object-fit: contain;
+              }
+            }
+
+            > .slider-block-packing {
+              position: absolute;
+              height: 100%;
+              width: 100%;
+              top: 0;
+              left: 0;
+              z-index: -4;
+              display: flex;
+              justify-content: flex-end;
+              align-items: flex-end;
+
+              > img {
+                height: 70%;
+                width: 70%;
+                object-fit: contain;
+              }
+            }
+
+            > .slider-block-additional {
+              position: absolute;
+              height: 40%;
+              width: 40%;
+              top: 60%;
+              left: 0;
+              z-index: -4;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: flex-start;
+              padding: 5%;
+
+              @media (max-width: calc($bp-lg - 1px)) {
+                height: 170px;
+                width: 180px;
+                top: 50%;
+                left: -15px;
+              }
+              @media (max-width: calc($bp-md - 1px)) {
+                height: 40%;
+                width: 40%;
+                top: 60%;
+                left: 0;
+              }
+              @media (max-width: calc($bp-sm - 1px)) {
+                height: 170px;
+                width: 180px;
+                top: 50%;
+                left: -15px;
+              }
+
+              > .slider-block-background {
+                background-color: pink;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                clip-path: path("m 67 40 c 42 -32 79 -10 105 20 c 29 46 45 95 20 119 c -25 24 -102 12 -139 -3 c -105 -43 -28 -105 14 -136 z");
+
+                @media (max-width: calc($bp-lg - 1px)) {
+                  clip-path: path("M52.5001 13.5C85.4963 -15.5135 125.35 10.6277 148.501 41.5004C183.023 87.5373 189.585 140.43 165.936 158.215C142.288 176 77.8325 170.202 46.9997 154.001C-42.2799 107.087 20.2611 41.8477 52.5001 13.5Z");
+                }
+                @media (max-width: calc($bp-md - 1px)) {
+                  clip-path: path("m 67 40 c 42 -32 79 -10 105 20 c 29 46 45 95 20 119 c -25 24 -102 12 -139 -3 c -105 -43 -28 -105 14 -136 z");
+                }
+                @media (max-width: calc($bp-sm - 1px)) {
+                  clip-path: path("M52.5001 13.5C85.4963 -15.5135 125.35 10.6277 148.501 41.5004C183.023 87.5373 189.585 140.43 165.936 158.215C142.288 176 77.8325 170.202 46.9997 154.001C-42.2799 107.087 20.2611 41.8477 52.5001 13.5Z");
+                }
+              }
+
+              > .title {
+                font-family: $mainFontFamily;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 36px;
+                line-height: 48px;
+                color: $fontColor;
+              }
+
+              > .text {
+                font-family: $mainFontFamily;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 18px;
+                text-indent: 2px;
+                color: $fontColor;
+              }
+            }
+          }
+
+          > .slider-block-right {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: center;
+
+            @media (max-width: calc($bp-md - 1px)) {
+              width: 100%;
+            }
+
+            > .slider-block-pagination {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+
+              @media (max-width: calc($bp-md - 1px)) {
+                justify-content: center;
+              }
+
+              > .pagination-item {
+                height: 12px;
+                width: 12px;
+                min-width: 12px;
+                border-radius: 50%;
+                transition: $transition;
+                background-color: $color2;
+                cursor: pointer;
+
+                &:hover {
+                  transform: scale(1.5);
+                  background-color: $fontColor;
+                }
+              }
+
+              > .active {
+                background-color: $linkHoverColor;
+
+                &:hover {
+                  background-color: $linkHoverColor;
+                }
+              }
+            }
+
+            > .slider-block-title {
+              font-family: $mainFontFamily;
+              font-style: normal;
+              font-weight: 700;
+              font-size: 36px;
+              line-height: 44px;
+              color: $fontColor;
+
+              @media (max-width: calc($bp-sm - 1px)) {
+                font-size: 28px;
+              }
+            }
+
+            > .slider-block-text {
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+
+              > p {
+                font-family: $mainFontFamily;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color: $alterFontColor1;
+
+                @media (max-width: calc($bp-sm - 1px)) {
+                  font-size: 14px;
+                }
+              }
+            }
+
+            > .slider-block-buttons {
+              display: flex;
+              align-items: center;
+              gap: 30px;
+
+              @media (max-width: calc($bp-sm - 1px)) {
+                gap: 20px;
+              }
+
+              > button {
+                width: 160px;
+                height: 40px;
+                border-radius: 8px;
+                font-family: $mainFontFamily;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 14px;
+                border: none;
+                transition: $transition;
+
+                @media (max-width: calc($bp-sm - 1px)) {
+                  width: 100%;
+                }
+              }
+
+              > .button-yellow {
+                background: rgba(242, 143, 27, 1);
+                color: $color;
+
+                &:hover {
+                  background: rgba(48, 82, 159, 0.2);
+                  color: $fontColor;
+                }
+              }
+
+              > .slider-block-link {
+                position: relative;
+
+
+
+
+                &:hover {
+                  > a {
+                    color: $linkHoverColor;
+                  }
+
+                  > .link-decoration {
+                    transform: translateY(-50%) translateX(10px) rotateY(180deg);
+                  }
+                }
+
+                @media (max-width: calc($bp-sm - 1px)) {
+                  width: 100%;
+                }
+
+                > a {
+                  font-family: $mainFontFamily;
+                  font-style: normal;
+                  font-weight: 700;
+                  font-size: 14px;
+                  line-height: 14px;
+                  color: rgba(48, 82, 159, 0.57);
+                  transition: $transition;
+                }
+
+                > .link-decoration {
+                  height: 15px;
+                  width: 15px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  background-image: url("/image/icons/chevron-blue.svg");
+                  background-repeat: no-repeat;
+                  background-size: contain;
+                  position: absolute;
+                  top: 50%;
+                  left: calc(100% + 5px);
+                  transition: $transition;
+                  transform: translateY(-50%) rotateY(180deg);
+
+                  @media (max-width: calc($bp-sm - 1px)) {
+                    display: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    > .block-2 {
+      padding: 110px 0 0 0;
+
+      > .container {
+
+        @media (max-width: calc($containerMaxWidth + 15px + 15px)) {
+          padding: 0 15px 0 15px;
+          max-width: 100%;
+        }
+
+        > .block-2-content {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          gap: 70px;
+
+          @media (max-width: calc($bp-xxl - 1px)) {
+            gap: 50px;
+          }
+
+          > .title {
+            font-family: $mainFontFamily;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 44px;
+            color: $fontColor;
+            text-align: center;
+          }
+
+          > .item-list {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 55px;
+
+            @media (max-width: calc($bp-xxl - 1px)) {
+              gap: 50px;
+            }
+            @media (max-width: calc($bp-sm - 1px)) {
+              gap: 20px;
+              justify-content: center;
+            }
+
+            > .item {
+              width: 100%;
+              max-width: 320px;
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+
+              @media (max-width: calc($bp-xxl - 1px)) {
+                max-width: calc( (100% - 100px) / 3 );
+              }
+              @media (max-width: calc($bp-lg - 1px)) {
+                max-width: calc( (100% - 50px) / 2 );
+              }
+              @media (max-width: calc($bp-sm - 1px)) {
+                max-width: 290px;
+              }
+
+              > .image {
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-end;
+                height: 130px;
+                width: 180px;
+
+                @media (max-width: calc($bp-sm - 1px)) {
+                  justify-content: center;
+                  width: 100%;
+                }
+
+                > img {
+                  height: 100%;
+                  width: 100%;
+                  object-fit: contain;
+                }
+              }
+
+              > .title {
+                font-family: $mainFontFamily;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 24px;
+                color: $fontColor;
+              }
+
+              > .text {
+                font-family: $mainFontFamily;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color: $alterFontColor;
+              }
+
+              > .additional {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+
+                &:hover {
+                  > .link {
+                    color: $linkHoverColor;
+                  }
+
+                  > .link-decoration {
+                    margin: 0 0 0 5px;
+                  }
+                }
+
+                > .icon {
+                  height: 25px;
+                  width: 25px;
+                  background-position: center;
+                  background-size: contain;
+                }
+
+                > .link {
+                  font-family: $mainFontFamily;
+                  font-style: normal;
+                  font-weight: 700;
+                  font-size: 12px;
+                  line-height: 12px;
+                  color: $fontColor;
+                  transition: $transition;
+                }
+
+                > .link-decoration {
+                  height: 15px;
+                  width: 15px;
+                  background-image: url(/image/icons/chevron-blue.svg);
+                  background-repeat: no-repeat;
+                  background-size: contain;
+                  transition: $transition;
+                  transform: rotateY(180deg);
+                  margin: 0 5px 0 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

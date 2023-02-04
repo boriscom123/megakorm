@@ -1,0 +1,57 @@
+// #{calc(50% - 10px)};
+// @media (max-width: 780px) {}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  color: $fontColor;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  max-width: $containerMaxWidth;
+  margin: 0 auto;
+}
+
+.bg-pink {
+  background-color: #F585A7;
+}
+
+.bg-lightblue {
+  background-color: #99E1EF;
+}
+
+.bg-blue {
+  background-color: #8A9CC6;
+}
+
+.bg-violet {
+  background-color: #AA89C0;
+}

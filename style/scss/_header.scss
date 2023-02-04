@@ -1,0 +1,152 @@
+.header {
+  width: 100%;
+  position: relative;
+
+  > .header-content {
+    width: 100%;
+
+    > .container {
+      padding: 50px 0 0 0;
+
+      @media (max-width: calc($containerMaxWidth + 15px + 15px)) {
+        padding: 50px 15px 0 15px;
+        max-width: 100%;
+      }
+
+      > .content {
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+
+        @media (max-width: calc($bp-sm - 1px)) {
+          gap: 20px;
+        }
+
+        > .logo {
+          width: 100%;
+          max-width: 226px;
+
+          > a {
+            height: 100%;
+            min-height: 35px;
+            width: 100%;
+            display: flex;
+            background-position: center;
+            background-size: contain;
+          }
+        }
+
+        > .header-nav-links {
+          width: 100%;
+          max-width: 635px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          @media (max-width: calc($bp-md - 1px)) {
+            display: none;
+          }
+
+          > a {
+            font-family: $mainFontFamily;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            color: $linkColor;
+            transition: $transition;
+
+            &:hover {
+              color: $linkHoverColor;
+            }
+          }
+        }
+
+        > .header-nav-links-mobile {
+          display: none;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 30px;
+          width: 40px;
+          cursor: pointer;
+
+          @media (max-width: calc($bp-md - 1px)) {
+            display: flex;
+          }
+          @media (max-width: calc($bp-sm - 1px)) {
+            height: 25px;
+            width: 30px;
+          }
+
+          > div {
+            width: 100%;
+            height: 5px;
+            background-color: $linkColor;
+            border-radius: 5px;
+
+            &:hover {
+              background-color: $linkHoverColor;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  > .header-top-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    background-image: url("/image/footer-background.jpg");
+    background-repeat: repeat-x;
+
+    > .gradient {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    }
+
+    > .header-top-image-container {
+      width: 100%;
+      max-width: 1920px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: flex-end;
+
+      > .image {
+        height: 600px;
+        width: 1000px;
+        padding: 100px 100px 0 100px;
+        background: linear-gradient(145deg, #F7D7DB 100%, rgba(247, 215, 219, 1) 80%);
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        clip-path: path("M866.55 0.500104C635.788 0.500902 321.363 0.499752 122.5 0.500051C-76.3628 0.500349 -0.999687 434.31 122.5 515.5C246 596.69 371.501 452.5 506 452.5C640.5 452.5 772.6 604 866.55 515.5C960.5 427 1097.31 0.499305 866.55 0.500104Z");
+
+        @media (max-width: calc($bp-md)) {
+          padding: 100px 30px 0 15px;
+        }
+
+        @media (max-width: calc($bp-sm)) {
+          padding: 100px 0 0 40px;
+          margin: -100px 0 0 0;
+        }
+
+        > img {
+          height: 100%;
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+
+      > .animation {
+        animation-name: header-image-decoration;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+    }
+  }
+}
